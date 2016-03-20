@@ -1,0 +1,11 @@
+
+
+import com.awesome.Applicant
+
+rule "Approve Good Credit"
+  when 
+    a: Applicant(creditScore > 700,requestAmount >20)
+  then
+    a.setApproved(true);
+    
+end 
